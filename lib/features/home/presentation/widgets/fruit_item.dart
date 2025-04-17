@@ -4,10 +4,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/utils/app_images.dart';
 import 'package:fruits_app/core/utils/app_styles.dart';
+import 'package:fruits_app/features/home/data/models/fruit_model.dart';
 
 class FruitItem extends StatelessWidget {
-  const FruitItem({super.key});
-
+  const FruitItem({super.key, required this.fruit});
+  final FruitModel fruit;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -26,11 +27,7 @@ class FruitItem extends StatelessWidget {
                     color: AppColors.baseWhite,
                     borderRadius: BorderRadius.circular(12.r),
                   ),
-                  child: Image.asset(
-                    Assets.imagesBanana,
-                    width: 100.w,
-                    height: 100.h,
-                  ),
+                  child: Image.asset(fruit.image, width: 100.w, height: 100.h),
                 ),
                 const Positioned(
                   right: 8,
@@ -43,20 +40,20 @@ class FruitItem extends StatelessWidget {
               ],
             ),
             SizedBox(height: 10.h),
-            Text("Banana", style: AppStyles.medium16Black),
+            Text(fruit.name, style: AppStyles.medium16Black),
             SizedBox(height: 5.h),
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 SvgPicture.asset(Assets.imagesStar),
                 SizedBox(width: 5.w),
-                Text("4.5", style: AppStyles.semiBold12Gray),
+                Text("${fruit.rate}", style: AppStyles.semiBold12Gray),
                 SizedBox(width: 5.w),
-                Text("(100)", style: AppStyles.semiBold12Gray),
+                Text("(${fruit.rateCount})", style: AppStyles.semiBold12Gray),
               ],
             ),
             SizedBox(height: 8.h),
-            Text("\$2.00", style: AppStyles.semiBold16Black),
+            Text("\$${fruit.price}", style: AppStyles.semiBold16Black),
           ],
         ),
       ),
