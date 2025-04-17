@@ -6,25 +6,25 @@ class Assets {
   /// assets/images/bag_icon.svg
   static const String imagesBagIcon = "assets/images/bag_icon.svg";
 
-  /// Assets for imagesBeveragesIcon
-  /// assets/images/Beverages_icon.svg
-  static const String imagesBeveragesIcon = "assets/images/Beverages_icon.svg";
+  /// Assets for imagesBeverages
+  /// assets/images/Beverages.png
+  static const String imagesBeverages = "assets/images/Beverages.png";
 
   /// Assets for imagesFruitsIcon
-  /// assets/images/fruits_icon.svg
-  static const String imagesFruitsIcon = "assets/images/fruits_icon.svg";
+  /// assets/images/fruits_icon.png
+  static const String imagesFruitsIcon = "assets/images/fruits_icon.png";
 
   /// Assets for imagesGrabberLogo
   /// assets/images/Grabber_logo.svg
   static const String imagesGrabberLogo = "assets/images/Grabber_logo.svg";
 
-  /// Assets for imagesLaundryIcon
-  /// assets/images/Laundry_icon.svg
-  static const String imagesLaundryIcon = "assets/images/Laundry_icon.svg";
+  /// Assets for imagesLaundry
+  /// assets/images/Laundry.png
+  static const String imagesLaundry = "assets/images/Laundry.png";
 
-  /// Assets for imagesMilkEggIcon
-  /// assets/images/milk_egg_icon.svg
-  static const String imagesMilkEggIcon = "assets/images/milk_egg_icon.svg";
+  /// Assets for imagesMilkIcon
+  /// assets/images/milk_icon.png
+  static const String imagesMilkIcon = "assets/images/milk_icon.png";
 
   /// Assets for imagesMotorIcon
   /// assets/images/motor_icon.svg
@@ -42,8 +42,8 @@ class Assets {
   /// assets/images/Slider_3.png
   static const String imagesSlider3 = "assets/images/Slider_3.png";
 
-  /// Assets for imagesVegetablesIcon
-  /// assets/images/Vegetables_icon.svg
-  static const String imagesVegetablesIcon = "assets/images/Vegetables_icon.svg";
+  /// Assets for imagesVegetables
+  /// assets/images/vegetables.png
+  static const String imagesVegetables = "assets/images/vegetables.png";
 }
 
