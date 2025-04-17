@@ -1,10 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruits_app/core/utils/app_colors.dart';
+import 'package:fruits_app/core/utils/app_images.dart';
+import 'package:fruits_app/core/utils/app_styles.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Row(
+          children: [
+            SvgPicture.asset(Assets.imagesMotorIcon),
+            const SizedBox(width: 10),
+            Text("61 Hopper street..", style: AppStyles.medium16Black),
+            const SizedBox(width: 5),
+            const Icon(Icons.keyboard_arrow_down, color: AppColors.black),
+          ],
+        ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 15.w),
+            child: SvgPicture.asset(Assets.imagesBagIcon),
+          ),
+        ],
+      ),
+    );
   }
 }
