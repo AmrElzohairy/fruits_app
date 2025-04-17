@@ -14,6 +14,13 @@ class AppStyles {
     fontSize: 14.sp,
     fontWeight: FontWeight.w500,
   );
+
+  static TextStyle medium16Black = TextStyle(
+    color: AppColors.black,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+  );
+  
   static TextStyle semiBold14Green = TextStyle(
     color: AppColors.primaryColor,
     fontSize: 14.sp,
