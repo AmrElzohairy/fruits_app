@@ -14,7 +14,7 @@ class HomeCategories extends StatefulWidget {
 class _HomeCategoriesState extends State<HomeCategories> {
   final List<CategoryModel> categories = [
     CategoryModel(name: "Fruits", image: Assets.imagesFruitsIcon),
-    CategoryModel(name: "Milk%eggs", image: Assets.imagesMilkIcon),
+    CategoryModel(name: "Milk & eggs", image: Assets.imagesMilkIcon),
     CategoryModel(name: "Beverages", image: Assets.imagesBeverages),
     CategoryModel(name: "Laundry", image: Assets.imagesLaundry),
     CategoryModel(name: "Vegetables", image: Assets.imagesVegetables),

@@ -36,6 +36,17 @@ class HomeView extends StatelessWidget {
             const HomeBannersCarousal(),
             SizedBox(height: 10.h),
             const HomeCategories(),
+            SizedBox(height: 25.h),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              child: Row(
+                children: [
+                  Text("Fruits", style: AppStyles.semiBold16Black),
+                  const Spacer(),
+                  Text("See all", style: AppStyles.semiBold14Green),
+                ],
+              ),
+            ),
           ],
         ),
       ),
