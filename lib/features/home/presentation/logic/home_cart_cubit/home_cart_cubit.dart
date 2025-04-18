@@ -29,11 +29,4 @@ class HomeCartCubit extends Cubit<HomeCartState> {
     return cartFruits.contains(fruit);
   }
 
-  void toggleCart(FruitModel fruit) {
-    if (isInCart(fruit)) {
-      removeFromCart(fruit);
-    } else {
-      addToCart(fruit);
-    }
-  }
 }

@@ -38,13 +38,13 @@ class FruitItem extends StatelessWidget {
                     builder: (context, state) {
                       return GestureDetector(
                         onTap: () {
-                          context.read<HomeCartCubit>().toggleCart(fruit);
+                          context.read<HomeCartCubit>().addToCart(fruit);
                         },
                         child: CircleAvatar(
                           backgroundColor: AppColors.white,
                           child: GestureDetector(
                             onTap: () {
-                              context.read<HomeCartCubit>().toggleCart(fruit);
+                              context.read<HomeCartCubit>().addToCart(fruit);
                             },
                             child: const Icon(Icons.add),
                           ),

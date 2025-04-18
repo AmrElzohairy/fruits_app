@@ -46,15 +46,47 @@ class HomeCart extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return Padding(
                         padding: const EdgeInsets.only(right: 5),
-                        child: CircleAvatar(
-                          backgroundColor: AppColors.white,
-                          radius: 25.r,
-                          child: Image.asset(
-                            context
-                                .read<HomeCartCubit>()
-                                .cartFruits[index]
-                                .image,
-                          ),
+                        child: Stack(
+                          children: [
+                            CircleAvatar(
+                              backgroundColor: AppColors.white,
+                              radius: 25.r,
+                              child: Image.asset(
+                                context
+                                    .read<HomeCartCubit>()
+                                    .cartFruits[index]
+                                    .image,
+                              ),
+                            ),
+                            Positioned(
+                              right: -1,
+                              top: -1,
+                              child: BlocBuilder<HomeCartCubit, HomeCartState>(
+                                builder: (context, state) {
+                                  return GestureDetector(
+                                    onTap: () {
+                                      context
+                                          .read<HomeCartCubit>()
+                                          .removeFromCart(
+                                            context
+                                                .read<HomeCartCubit>()
+                                                .cartFruits[index],
+                                          );
+                                    },
+                                    child: CircleAvatar(
+                                      radius: 12.r,
+                                      backgroundColor: AppColors.red,
+                                      child: Icon(
+                                        Icons.close,
+                                        color: AppColors.white,
+                                        size: 15.sp,
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ),
+                          ],
                         ),
                       );
                     },
