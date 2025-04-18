@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/utils/app_images.dart';
 import 'package:fruits_app/core/utils/app_styles.dart';
 import 'package:fruits_app/features/home/data/models/fruit_model.dart';
+import 'package:fruits_app/features/home/presentation/logic/home_cart_cubit/home_cart_cubit.dart';
 
 class FruitItem extends StatelessWidget {
   const FruitItem({super.key, required this.fruit});
@@ -29,12 +31,26 @@ class FruitItem extends StatelessWidget {
                   ),
                   child: Image.asset(fruit.image, width: 100.w, height: 100.h),
                 ),
-                const Positioned(
+                Positioned(
                   right: 8,
                   bottom: 8,
-                  child: CircleAvatar(
-                    backgroundColor: AppColors.white,
-                    child: Icon(Icons.add),
+                  child: BlocBuilder<HomeCartCubit, HomeCartState>(
+                    builder: (context, state) {
+                      return GestureDetector(
+                        onTap: () {
+                          context.read<HomeCartCubit>().toggleCart(fruit);
+                        },
+                        child: CircleAvatar(
+                          backgroundColor: AppColors.white,
+                          child: GestureDetector(
+                            onTap: () {
+                              context.read<HomeCartCubit>().toggleCart(fruit);
+                            },
+                            child: const Icon(Icons.add),
+                          ),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ],

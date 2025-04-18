@@ -55,7 +55,7 @@ class _FruitsListViewState extends State<FruitsListView> {
       rate: 4.5,
       rateCount: 100,
     ),
-        FruitModel(
+    FruitModel(
       name: "Strawberry",
       image: Assets.imagesStrawberry,
       price: "2.5",
