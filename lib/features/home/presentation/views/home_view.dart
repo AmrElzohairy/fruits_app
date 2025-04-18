@@ -8,7 +8,7 @@ import 'package:fruits_app/core/utils/app_styles.dart';
 import 'package:fruits_app/features/home/presentation/logic/home_cart_cubit/home_cart_cubit.dart';
 import 'package:fruits_app/features/home/presentation/views/widgets/fruits_list_view.dart';
 import 'package:fruits_app/features/home/presentation/views/widgets/home_banners_carousal.dart';
-import 'package:fruits_app/features/home/presentation/views/widgets/home_cart.dart';
+import 'package:fruits_app/features/home/presentation/views/widgets/home_bloc_builder.dart';
 import 'package:fruits_app/features/home/presentation/views/widgets/home_categories.dart';
 import 'package:fruits_app/features/home/presentation/views/widgets/see_all_widget.dart';
 
@@ -51,13 +51,7 @@ class HomeView extends StatelessWidget {
                 padding: EdgeInsets.only(left: 12),
                 child: FruitsListView(),
               ),
-              BlocBuilder<HomeCartCubit, HomeCartState>(
-                builder: (context, state) {
-                  return context.read<HomeCartCubit>().cartFruits.isNotEmpty
-                      ? const HomeCart()
-                      : const SizedBox.shrink();
-                },
-              ),
+              const HomeCartBlocBuilder(),
             ],
           ),
         ),
