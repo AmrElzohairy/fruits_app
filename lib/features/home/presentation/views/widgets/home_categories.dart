@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/features/home/data/models/category_model.dart';
-import 'package:fruits_app/features/home/presentation/widgets/category_item.dart';
+import 'package:fruits_app/features/home/presentation/views/widgets/category_item.dart';
 
-import '../../../../core/utils/app_images.dart';
+import '../../../../../core/utils/app_images.dart';
 
 class HomeCategories extends StatefulWidget {
   const HomeCategories({super.key});

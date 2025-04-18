@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_app/core/utils/app_images.dart';
 import 'package:fruits_app/core/utils/app_styles.dart';
 
-import '../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_colors.dart';
 
 class HomeCart extends StatelessWidget {
   const HomeCart({super.key});

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 
-import '../../../../core/utils/app_styles.dart';
+import '../../../../../core/utils/app_styles.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({super.key, required this.name, required this.image});

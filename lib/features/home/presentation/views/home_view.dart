@@ -4,11 +4,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/utils/app_images.dart';
 import 'package:fruits_app/core/utils/app_styles.dart';
-import 'package:fruits_app/features/home/presentation/widgets/fruits_list_view.dart';
-import 'package:fruits_app/features/home/presentation/widgets/home_banners_carousal.dart';
-import 'package:fruits_app/features/home/presentation/widgets/home_cart.dart';
-import 'package:fruits_app/features/home/presentation/widgets/home_categories.dart';
-import 'package:fruits_app/features/home/presentation/widgets/see_all_widget.dart';
+import 'package:fruits_app/features/home/presentation/views/widgets/fruits_list_view.dart';
+import 'package:fruits_app/features/home/presentation/views/widgets/home_banners_carousal.dart';
+import 'package:fruits_app/features/home/presentation/views/widgets/home_cart.dart';
+import 'package:fruits_app/features/home/presentation/views/widgets/home_categories.dart';
+import 'package:fruits_app/features/home/presentation/views/widgets/see_all_widget.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
