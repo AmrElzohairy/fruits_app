@@ -6,6 +6,7 @@ import 'package:fruits_app/core/utils/app_images.dart';
 import 'package:fruits_app/core/utils/app_styles.dart';
 import 'package:fruits_app/features/home/presentation/widgets/fruits_list_view.dart';
 import 'package:fruits_app/features/home/presentation/widgets/home_banners_carousal.dart';
+import 'package:fruits_app/features/home/presentation/widgets/home_cart.dart';
 import 'package:fruits_app/features/home/presentation/widgets/home_categories.dart';
 import 'package:fruits_app/features/home/presentation/widgets/see_all_widget.dart';
 
@@ -45,6 +46,7 @@ class HomeView extends StatelessWidget {
               padding: EdgeInsets.only(left: 12),
               child: FruitsListView(),
             ),
+            const HomeCart(),
           ],
         ),
       ),
