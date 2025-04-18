@@ -18,7 +18,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-        create: (context) => HomeCartCubit(),
+      create: (context) => HomeCartCubit(),
 
       child: Scaffold(
         appBar: AppBar(
@@ -51,7 +51,13 @@ class HomeView extends StatelessWidget {
                 padding: EdgeInsets.only(left: 12),
                 child: FruitsListView(),
               ),
-              const HomeCart(),
+              BlocBuilder<HomeCartCubit, HomeCartState>(
+                builder: (context, state) {
+                  return context.read<HomeCartCubit>().cartFruits.isNotEmpty
+                      ? const HomeCart()
+                      : const SizedBox.shrink();
+                },
+              ),
             ],
           ),
         ),
