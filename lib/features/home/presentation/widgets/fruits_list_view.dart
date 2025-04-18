@@ -34,6 +34,34 @@ class _FruitsListViewState extends State<FruitsListView> {
       rate: 4.8,
       rateCount: 120,
     ),
+    FruitModel(
+      name: "Pineapple",
+      image: Assets.imagesPineapple,
+      price: "2.5",
+      rate: 4.5,
+      rateCount: 100,
+    ),
+    FruitModel(
+      name: "Watermelon",
+      image: Assets.imagesWatermelon,
+      price: "2.5",
+      rate: 4.5,
+      rateCount: 100,
+    ),
+    FruitModel(
+      name: "Avocado",
+      image: Assets.imagesAvocado,
+      price: "2.5",
+      rate: 4.5,
+      rateCount: 100,
+    ),
+        FruitModel(
+      name: "Strawberry",
+      image: Assets.imagesStrawberry,
+      price: "2.5",
+      rate: 4.5,
+      rateCount: 100,
+    ),
   ];
 
   @override
@@ -41,7 +69,7 @@ class _FruitsListViewState extends State<FruitsListView> {
     return SizedBox(
       height: 235.h,
       child: ListView.builder(
-        itemCount: 3,
+        itemCount: fruits.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return FruitItem(fruit: fruits[index]);
