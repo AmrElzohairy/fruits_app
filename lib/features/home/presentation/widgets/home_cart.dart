@@ -32,28 +32,46 @@ class HomeCart extends StatelessWidget {
         ),
         child: Row(
           children: [
-            CircleAvatar(
-              backgroundColor: AppColors.white,
-              radius: 25.r,
-              child: Image.asset(Assets.imagesWatermelon),
-            ),
-            const Spacer(),
-            const VerticalDivider(),
-            SizedBox(width: 5.w),
-            Badge(
-              label: Text(
-                "1",
-                style: AppStyles.medium14Black.copyWith(
-                  color: AppColors.white,
-                  fontSize: 12.sp,
-                ),
+            Expanded(
+              flex: 11,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 2,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.only(right: 5),
+                    child: CircleAvatar(
+                      backgroundColor: AppColors.white,
+                      radius: 25.r,
+                      child: Image.asset(Assets.imagesWatermelon),
+                    ),
+                  );
+                },
               ),
-              child: SvgPicture.asset(
-                Assets.imagesBagIcon,
-                colorFilter: const ColorFilter.mode(
-                  AppColors.white,
-                  BlendMode.srcIn,
-                ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Row(
+                children: [
+                  const VerticalDivider(),
+                  SizedBox(width: 5.w),
+                  Badge(
+                    label: Text(
+                      "1",
+                      style: AppStyles.medium14Black.copyWith(
+                        color: AppColors.white,
+                        fontSize: 12.sp,
+                      ),
+                    ),
+                    child: SvgPicture.asset(
+                      Assets.imagesBagIcon,
+                      colorFilter: const ColorFilter.mode(
+                        AppColors.white,
+                        BlendMode.srcIn,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
